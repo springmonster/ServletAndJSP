@@ -1,0 +1,23 @@
+<%@page import="java.util.List"%>
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html>
+    <head>
+        <meta content='text/html; charset=UTF-8' 
+              http-equiv='content-type'>
+        <title>新增會員失敗</title>
+    </head>
+    <body>
+	    <h1>新增會員失敗</h1>
+	    <ul style='color: rgb(255, 0, 0);'>
+<%
+    List<String> errors = (List<String>) request.getAttribute("errors");
+	for (String error : errors) {
+%>
+		<li><%= error %></li>
+<%
+    }
+%>
+	    </ul>
+	    <a href='register.html'>返回註冊頁面</a>
+    </body>
+</html>

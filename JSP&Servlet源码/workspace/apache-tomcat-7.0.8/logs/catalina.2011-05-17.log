@@ -1,0 +1,395 @@
+2011/5/17 上午 09:52:14 org.apache.catalina.core.AprLifecycleListener init
+資訊: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.6.0\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;;C:\Program Files\Windows Live\Shared;C:\Winware\scala-2.7.7\bin
+2011/5/17 上午 09:52:16 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["http-bio-8080"]
+2011/5/17 上午 09:52:17 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["ajp-bio-8009"]
+2011/5/17 上午 09:52:17 org.apache.catalina.startup.Catalina load
+資訊: Initialization processed in 4514 ms
+2011/5/17 上午 09:52:17 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service Catalina
+2011/5/17 上午 09:52:17 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet Engine: Apache Tomcat/7.0.8
+2011/5/17 上午 09:52:17 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory docs
+2011/5/17 上午 09:52:19 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory examples
+2011/5/17 上午 09:52:20 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory host-manager
+2011/5/17 上午 09:52:20 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory manager
+2011/5/17 上午 09:52:21 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory ROOT
+2011/5/17 上午 09:52:21 org.apache.coyote.AbstractProtocolHandler start
+資訊: Starting ProtocolHandler ["http-bio-8080"]
+2011/5/17 上午 09:52:21 org.apache.coyote.AbstractProtocolHandler start
+資訊: Starting ProtocolHandler ["ajp-bio-8009"]
+2011/5/17 上午 09:52:21 org.apache.catalina.startup.Catalina start
+資訊: Server startup in 4469 ms
+2011/5/17 上午 09:52:23 org.apache.catalina.startup.HostConfig deployDescriptor
+資訊: Deploying configuration descriptor exercise2.xml from C:\workspace\apache-tomcat-7.0.8\conf\Catalina\localhost
+2011/5/17 上午 09:52:24 org.apache.catalina.startup.HostConfig deployDescriptor
+嚴重的: Error deploying configuration descriptor exercise2.xml
+java.lang.IllegalArgumentException: Invalid <url-pattern> MemoryLeak in servlet mapping
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3041)
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3013)
+	at org.apache.catalina.deploy.WebXml.configureContext(WebXml.java:1276)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1267)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:876)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:318)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:118)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4977)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:151)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:819)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:789)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:609)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:638)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:527)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1359)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:838)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:761)
+	at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1468)
+	at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:847)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:357)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:309)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:212)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:247)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:165)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:591)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:542)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:120)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:385)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:249)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:189)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:290)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:888)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:911)
+	at java.lang.Thread.run(Thread.java:664)
+2011/5/17 上午 09:52:31 org.apache.catalina.startup.HostConfig deployDescriptor
+資訊: Deploying configuration descriptor exercise2.xml from C:\workspace\apache-tomcat-7.0.8\conf\Catalina\localhost
+2011/5/17 上午 09:52:31 org.apache.catalina.startup.HostConfig deployDescriptor
+嚴重的: Error deploying configuration descriptor exercise2.xml
+java.lang.IllegalArgumentException: Invalid <url-pattern> MemoryLeak in servlet mapping
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3041)
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3013)
+	at org.apache.catalina.deploy.WebXml.configureContext(WebXml.java:1276)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1267)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:876)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:318)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:118)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4977)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:151)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:819)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:789)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:609)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:638)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:561)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:470)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1346)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:298)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:118)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1236)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1398)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1401)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1385)
+	at java.lang.Thread.run(Thread.java:664)
+2011/5/17 上午 09:52:41 org.apache.catalina.startup.HostConfig deployDescriptor
+資訊: Deploying configuration descriptor exercise2.xml from C:\workspace\apache-tomcat-7.0.8\conf\Catalina\localhost
+2011/5/17 上午 09:52:42 org.apache.catalina.startup.HostConfig deployDescriptor
+嚴重的: Error deploying configuration descriptor exercise2.xml
+java.lang.IllegalArgumentException: Invalid <url-pattern> MemoryLeak in servlet mapping
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3041)
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3013)
+	at org.apache.catalina.deploy.WebXml.configureContext(WebXml.java:1276)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1267)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:876)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:318)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:118)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4977)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:151)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:819)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:789)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:609)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:638)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:561)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:470)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1346)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:298)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:118)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1236)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1398)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1401)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1385)
+	at java.lang.Thread.run(Thread.java:664)
+2011/5/17 上午 09:52:47 org.apache.catalina.core.StandardServer await
+資訊: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+2011/5/17 上午 09:52:47 org.apache.coyote.AbstractProtocolHandler pause
+資訊: Pausing ProtocolHandler ["http-bio-8080"]
+2011/5/17 上午 09:52:48 org.apache.coyote.AbstractProtocolHandler pause
+資訊: Pausing ProtocolHandler ["ajp-bio-8009"]
+2011/5/17 上午 09:52:49 org.apache.catalina.core.StandardService stopInternal
+資訊: Stopping service Catalina
+2011/5/17 上午 09:52:52 org.apache.coyote.AbstractProtocolHandler stop
+資訊: Stopping ProtocolHandler ["http-bio-8080"]
+2011/5/17 上午 09:52:52 org.apache.coyote.AbstractProtocolHandler stop
+資訊: Stopping ProtocolHandler ["ajp-bio-8009"]
+2011/5/17 上午 09:53:24 org.apache.catalina.core.AprLifecycleListener init
+資訊: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.6.0\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;;C:\Program Files\Windows Live\Shared;C:\Winware\scala-2.7.7\bin
+2011/5/17 上午 09:53:24 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["http-bio-8080"]
+2011/5/17 上午 09:53:24 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["ajp-bio-8009"]
+2011/5/17 上午 09:53:24 org.apache.catalina.startup.Catalina load
+資訊: Initialization processed in 625 ms
+2011/5/17 上午 09:53:24 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service Catalina
+2011/5/17 上午 09:53:24 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet Engine: Apache Tomcat/7.0.8
+2011/5/17 上午 09:53:24 org.apache.catalina.startup.HostConfig deployDescriptor
+資訊: Deploying configuration descriptor exercise2.xml from C:\workspace\apache-tomcat-7.0.8\conf\Catalina\localhost
+2011/5/17 上午 09:53:25 org.apache.catalina.startup.HostConfig deployDescriptor
+嚴重的: Error deploying configuration descriptor exercise2.xml
+java.lang.IllegalArgumentException: Invalid <url-pattern> MemoryLeak in servlet mapping
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3037)
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3012)
+	at org.apache.catalina.deploy.WebXml.configureContext(WebXml.java:1274)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1261)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:874)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:317)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:89)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:812)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:787)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:607)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:633)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:558)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:468)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1302)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:311)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:89)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:343)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:323)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:1043)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:774)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:1035)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:291)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:443)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:724)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:620)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:304)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:432)
+2011/5/17 上午 09:53:25 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory docs
+2011/5/17 上午 09:53:25 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory examples
+2011/5/17 上午 09:53:25 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory host-manager
+2011/5/17 上午 09:53:25 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory manager
+2011/5/17 上午 09:53:25 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory ROOT
+2011/5/17 上午 09:53:25 org.apache.coyote.AbstractProtocolHandler start
+資訊: Starting ProtocolHandler ["http-bio-8080"]
+2011/5/17 上午 09:53:25 org.apache.coyote.AbstractProtocolHandler start
+資訊: Starting ProtocolHandler ["ajp-bio-8009"]
+2011/5/17 上午 09:53:25 org.apache.catalina.startup.Catalina start
+資訊: Server startup in 854 ms
+2011/5/17 上午 09:53:25 org.apache.catalina.startup.HostConfig deployDescriptor
+資訊: Deploying configuration descriptor exercise2.xml from C:\workspace\apache-tomcat-7.0.8\conf\Catalina\localhost
+2011/5/17 上午 09:53:25 org.apache.catalina.startup.HostConfig deployDescriptor
+嚴重的: Error deploying configuration descriptor exercise2.xml
+java.lang.IllegalArgumentException: Invalid <url-pattern> MemoryLeak in servlet mapping
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3037)
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3012)
+	at org.apache.catalina.deploy.WebXml.configureContext(WebXml.java:1274)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1261)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:874)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:317)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:89)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:812)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:787)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:607)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:633)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:525)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1357)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:297)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:836)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:761)
+	at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1467)
+	at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:842)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:355)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:306)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:240)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:161)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:589)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:164)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:541)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:383)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:243)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:188)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:288)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)
+2011/5/17 上午 09:53:35 org.apache.catalina.startup.HostConfig deployDescriptor
+資訊: Deploying configuration descriptor exercise2.xml from C:\workspace\apache-tomcat-7.0.8\conf\Catalina\localhost
+2011/5/17 上午 09:53:35 org.apache.catalina.startup.HostConfig deployDescriptor
+嚴重的: Error deploying configuration descriptor exercise2.xml
+java.lang.IllegalArgumentException: Invalid <url-pattern> MemoryLeak in servlet mapping
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3037)
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3012)
+	at org.apache.catalina.deploy.WebXml.configureContext(WebXml.java:1274)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1261)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:874)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:317)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:89)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:812)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:787)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:607)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:633)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:558)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:468)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1343)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:294)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:89)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1235)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1393)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1403)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1382)
+	at java.lang.Thread.run(Thread.java:662)
+2011/5/17 上午 09:53:45 org.apache.catalina.startup.HostConfig deployDescriptor
+資訊: Deploying configuration descriptor exercise2.xml from C:\workspace\apache-tomcat-7.0.8\conf\Catalina\localhost
+2011/5/17 上午 09:53:45 org.apache.catalina.startup.HostConfig deployDescriptor
+嚴重的: Error deploying configuration descriptor exercise2.xml
+java.lang.IllegalArgumentException: Invalid <url-pattern> MemoryLeak in servlet mapping
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3037)
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3012)
+	at org.apache.catalina.deploy.WebXml.configureContext(WebXml.java:1274)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1261)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:874)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:317)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:89)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:812)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:787)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:607)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:633)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:558)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:468)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1343)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:294)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:89)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1235)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1393)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1403)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1382)
+	at java.lang.Thread.run(Thread.java:662)
+2011/5/17 上午 09:53:55 org.apache.catalina.startup.HostConfig deployDescriptor
+資訊: Deploying configuration descriptor exercise2.xml from C:\workspace\apache-tomcat-7.0.8\conf\Catalina\localhost
+2011/5/17 上午 09:53:55 org.apache.catalina.startup.HostConfig deployDescriptor
+嚴重的: Error deploying configuration descriptor exercise2.xml
+java.lang.IllegalArgumentException: Invalid <url-pattern> MemoryLeak in servlet mapping
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3037)
+	at org.apache.catalina.core.StandardContext.addServletMapping(StandardContext.java:3012)
+	at org.apache.catalina.deploy.WebXml.configureContext(WebXml.java:1274)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1261)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:874)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:317)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:89)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:812)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:787)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:607)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:633)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:558)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:468)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1343)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:294)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:89)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1235)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1393)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1403)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1382)
+	at java.lang.Thread.run(Thread.java:662)
+2011/5/17 上午 09:54:05 org.apache.catalina.startup.HostConfig deployDescriptor
+資訊: Deploying configuration descriptor exercise2.xml from C:\workspace\apache-tomcat-7.0.8\conf\Catalina\localhost
+2011/5/17 上午 09:54:05 org.apache.catalina.util.LifecycleBase start
+資訊: The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/exercise2]] after start() had already been called. The second call will be ignored.
+2011/5/17 上午 09:54:18 org.apache.catalina.core.StandardServer await
+資訊: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+2011/5/17 上午 09:54:18 org.apache.coyote.AbstractProtocolHandler pause
+資訊: Pausing ProtocolHandler ["http-bio-8080"]
+2011/5/17 上午 09:54:19 org.apache.coyote.AbstractProtocolHandler pause
+資訊: Pausing ProtocolHandler ["ajp-bio-8009"]
+2011/5/17 上午 09:54:20 org.apache.catalina.core.StandardService stopInternal
+資訊: Stopping service Catalina
+2011/5/17 上午 09:54:22 org.apache.coyote.AbstractProtocolHandler stop
+資訊: Stopping ProtocolHandler ["http-bio-8080"]
+2011/5/17 上午 09:54:22 org.apache.coyote.AbstractProtocolHandler stop
+資訊: Stopping ProtocolHandler ["ajp-bio-8009"]
+2011/5/17 上午 09:55:42 org.apache.catalina.startup.Catalina stopServer
+嚴重的: Catalina.stop: 
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:189)
+	at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:456)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:353)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:434)

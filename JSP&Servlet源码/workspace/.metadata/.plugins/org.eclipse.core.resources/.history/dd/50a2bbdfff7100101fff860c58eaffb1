@@ -1,0 +1,13 @@
+package cc.openhome.tag;
+
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class IfTag extends TagSupport {
+    private boolean test;
+    
+    public void setTest(boolean test) {
+        this.test = test;
+    }
+    
+    
+}

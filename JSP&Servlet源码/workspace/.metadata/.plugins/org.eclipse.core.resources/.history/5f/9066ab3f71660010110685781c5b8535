@@ -1,0 +1,23 @@
+package cc.openhome.web;
+
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
+
+import org.apache.commons.lang.StringEscapeUtils;
+
+public class EscapeWrapper extends HttpServletRequestWrapper {
+    private Map<String, String> escapeMap;
+
+    public EscapeWrapper(HttpServletRequest request, Map<String, String> escapeMap) {
+        super(request);
+        this.escapeMap = 
+    }
+    
+    @Override
+    public String getParameter(String name) {
+        String value = getRequest().getParameter(name);
+        return StringEscapeUtils.escapeHtml(value);
+    }
+}

@@ -1,0 +1,24 @@
+package cc.openhome.model;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class UserService {
+    private String USER_HOME;
+
+    public UserService(String USER_HOME) {
+        this.USER_HOME = USER_HOME;
+    }
+
+    private void createUserData(String email, String username, String password)
+            throws IOException {
+        File userhome = new File(USERS + "/" + username);
+        userhome.mkdir();
+        BufferedWriter writer = new BufferedWriter(new FileWriter(userhome
+                + "/profile"));
+        writer.write(email + "\t" + password);
+        writer.close();
+    }
+}

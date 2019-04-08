@@ -1,0 +1,74 @@
+package cc.openhome.model;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FilenameFilter;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class BlahDAOImpl implements BlahDAO {
+    private String USERS;
+    
+    public BlahDAOImpl(String USERS) {
+        this.USERS = USERS;
+    }
+
+    private class TxtFilenameFilter implements FilenameFilter {
+        @Override 
+        public boolean accept(File dir, String name) {
+            return name.endsWith(".txt");
+        }
+    }
+    
+    private TxtFilenameFilter filenameFilter = new TxtFilenameFilter();
+    
+    @Override
+    public List<Blah> getBlahs(Blah blah) {
+        File border = new File(USERS + "/" + blah.getUsername());
+        String[] txts = border.list(filenameFilter);
+        
+        List<Blah> blahs = new ArrayList<Blah>();
+        for(String txt : txts) { 
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(
+                            new FileInputStream(USERS + "/" + blah.getUsername() + "/" + txt), "UTF-8"));
+            String text = null;
+            StringBuilder builder = new StringBuilder();
+            while((text = reader.readLine()) != null) {
+                builder.append(text);
+            }
+            Date date = new Date(Long.parseLong(txt.substring(0, txt.indexOf(".txt"))));
+            String content = builder.toString();
+            blahs.add(new Blah(blah.getUsername(), date, builder.toString());)
+            
+            reader.close();
+        }
+        
+        List<Blah> blahs = new ArrayList<Blah>();
+        
+        for (Date date : messages.keySet()) {
+            String txt = messages.get(date);
+            blahs.add(new Blah(blah.getUsername(), date, txt));
+        }
+        
+        return blahs;
+    }
+
+    @Override
+    public void add(Blah blah) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void delete(Blah blah) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

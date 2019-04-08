@@ -1,0 +1,15 @@
+package cc.openhome.tag;
+
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class ForEachTag extends TagSupport {
+    private String var;
+    private Iterator iterator;
+    public void setVar(String var) {
+        this.var = var;
+    }
+
+    public void setItems(Collection items) {
+        this.iterator = items.iterator();
+    }
+}

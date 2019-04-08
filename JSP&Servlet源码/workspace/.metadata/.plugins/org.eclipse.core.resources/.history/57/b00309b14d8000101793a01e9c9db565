@@ -1,0 +1,33 @@
+package cc.openhome.model;
+
+import java.io.File;
+
+public class AccountDAOImpl implements AccountDAO {
+    private String USERS;
+    
+    
+    public AccountDAOImpl(String USERS) {
+        USERS = USERS;
+    }
+
+    @Override
+    public boolean isUserExisted(Account account) {
+        for (String file : new File(USERS).list()) {
+            if (file.equals(username)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public void add(Account account) {
+
+    }
+
+    @Override
+    public Account get(Account account) {
+        return null;
+    }
+
+}

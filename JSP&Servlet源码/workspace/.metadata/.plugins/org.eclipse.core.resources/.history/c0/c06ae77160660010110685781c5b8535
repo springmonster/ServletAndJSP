@@ -1,0 +1,26 @@
+package cc.openhome;
+
+import javax.servlet.annotation.WebListener;
+import javax.servlet.http.HttpSessionEvent;
+import javax.servlet.http.HttpSessionListener;
+import javax.servlet.http.HttpSessionEvent;
+
+@WebListener
+public class OnlineUser implements HttpSessionListener {    
+    private static Map<String, HttpSession> sessionMap =
+        new HashMap<String, HttpSession>();
+
+public static Map<String, HttpSession> getSessionMap() {
+    return sessionMap;
+}
+
+public void sessionCreated(HttpSessionEvent se) {
+    HttpSession session = se.getSession();
+    getSessionMap().put(session.getId(), session);
+}
+
+public void sessionDestroyed(HttpSessionEvent se) {
+    getSessionMap().remove(se.getSession().getId());
+}
+
+}

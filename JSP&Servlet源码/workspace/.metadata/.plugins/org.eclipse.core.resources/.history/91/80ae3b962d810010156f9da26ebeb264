@@ -1,0 +1,80 @@
+package cc.openhome.model;
+
+import java.sql.*;
+import java.util.*;
+import javax.sql.DataSource;
+
+public class AccountDAOJdbcImpl implements AccountDAO {
+    private JdbcTemplate jdbcTemplate;
+    
+    public AccountDAOJdbcImpl(DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    }
+
+    @Override
+    public boolean isUserExisted(Account account) {
+        return jdbcTemplate.queryForList("SELECT COUNT(1) FROM t_account WHERE name = ?", 
+                new Object[] { account.getName() }).size() == 1;
+    }
+
+    @Override
+    public void addAccount(Account account) {
+        jdbcTemplate.update("INSERT INTO t_account(name, password, email) VALUES(?, ?, ?)", 
+                new Object[] {account.getName(), account.getEmail(), account.getPassword()});
+    }
+
+    @Override
+    public Account getAccount(Account account) {
+        List<Map> accts = jdbcTemplate.queryForList("SELECT email, password FROM t_account WHERE name = ?",
+                new Object[] { account.getName() });
+        if(accts.size() == 1) {
+            Map acct = accts.get(0);
+            String email = (String) acct.get("email");
+            String password = (String) acct.get("password");
+            return new Account(account.getName(), email, password);
+        }
+        
+        
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        SQLException ex = null;
+        Account acct = null;
+        try {
+            conn = dataSource.getConnection();
+            stmt = conn.prepareStatement("SELECT email, password FROM t_account WHERE name = ?");
+            stmt.setString(1, account.getName());
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()) {
+                acct = new Account(account.getName(), rs.getString(1), rs.getString(2));
+            }
+        } catch (SQLException e) {
+            ex = e;
+        }
+        finally {
+            if(stmt != null) {
+                try {
+                    stmt.close();
+                } catch (SQLException e) {
+                    if(ex == null) {
+                        ex = e;
+                    }
+                }
+            }
+            if(conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    if(ex == null) {
+                        ex = e;
+                    }
+                }
+            }
+        }
+        if(ex != null) {
+            throw new RuntimeException(ex);
+        }
+        
+        return acct;
+    }
+
+}

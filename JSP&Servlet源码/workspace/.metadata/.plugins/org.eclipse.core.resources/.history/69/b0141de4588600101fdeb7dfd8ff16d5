@@ -1,0 +1,14 @@
+package cc.openhome.model;
+
+public class GmailCarrier implements MailCarrier {
+    private Properties props;
+    
+    
+    
+    @Override
+    public void sendTo(Account account, String title, String message) {
+        // TODO Auto-generated method stub
+        
+    }
+
+}

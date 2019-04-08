@@ -1,0 +1,23 @@
+    private String USER_VIEW;
+
+    @Override
+    public void init() throws ServletException {
+        USER_VIEW = getServletConfig().getInitParameter("USER_VIEW");
+    }
+    protected void doGet(HttpServletRequest request, 
+                         HttpServletResponse response) 
+                             throws ServletException, IOException {
+        UserService userService = 
+            (UserService) getServletContext().getAttribute("userService");
+        
+        String username = request.getPathInfo().substring(1);
+        
+        if(userService.isUserExisted(username)) {
+            Blah blah = new Blah();
+            blah.setUsername(username);
+            List<Blah> blahs = userService.getBlahs(blah);
+            request.setAttribute("blahs", blahs);
+        }
+        request.setAttribute("username", username);
+        request.getRequestDispatcher(USER_VIEW).forward(request, response);
+    }

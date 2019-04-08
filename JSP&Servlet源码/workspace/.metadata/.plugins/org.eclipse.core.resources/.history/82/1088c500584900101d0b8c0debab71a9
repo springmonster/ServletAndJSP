@@ -1,0 +1,90 @@
+package cc.openhome;
+
+import java.io.DataInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/upload.do")
+public class UploadServlet extends HttpServlet {
+	class Position {
+		int begin;
+		int end;
+		Position(int begin, int end) {
+			this.begin = begin;
+			this.end = end;
+		}
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 讀取請求本體
+        byte[] body = readBody(request);
+
+        // 取得所有本體內容的字串表示
+        String reqBody = new String(body);
+        
+        // 取得上傳的檔案名稱
+        String filename = getFilename(reqBody);
+
+        // 取得檔案啟始與結束位置
+        Position p = getFilePosition(request, reqBody);
+        
+        // 輸出至檔案
+        writeTo(filename, body, p);
+    }
+	
+	private byte[] readBody(HttpServletRequest request) throws IOException {
+		int formDataLength = request.getContentLength();
+        DataInputStream dataStream =
+                new DataInputStream(request.getInputStream());
+        byte datas[] = new byte[formDataLength];
+        int totalBytes = 0;
+        while (totalBytes < formDataLength) {
+            int bytes = dataStream.read(datas, totalBytes, formDataLength);
+            totalBytes += bytes;
+        }
+		return datas;
+	}
+
+	private void writeTo(String filename, byte[] body, Position p)
+			throws FileNotFoundException, IOException {
+		FileOutputStream fileOutputStream =
+                new FileOutputStream("c:/workspace/" + filename);
+        fileOutputStream.write(body, p.begin, (p.end - p.begin));
+        fileOutputStream.flush();
+        fileOutputStream.close();
+	}
+
+	private Position getFilePosition(HttpServletRequest request, String reqBody) {
+        // 取得檔案區段邊界資訊
+        String contentType = request.getContentType();
+        String boundary = contentType.substring(
+                contentType.lastIndexOf("=") + 1, contentType.length());
+
+        // 取得實際上傳檔案的起始與結束位置        
+        int pos = reqBody.indexOf("filename=\"");
+        pos = reqBody.indexOf("\n", pos) + 1;
+        pos = reqBody.indexOf("\n", pos) + 1;
+        pos = reqBody.indexOf("\n", pos) + 1;
+        int boundaryLoc = reqBody.indexOf(boundary, pos) - 4;
+        int begin = ((reqBody.substring(0, pos)).getBytes()).length;
+        int end = ((reqBody.substring(0, boundaryLoc)).getBytes()).length;
+        return new Position(begin, end);
+	}
+
+	private String getFilename(String reqBody) {
+		String filename = reqBody.substring(
+                reqBody.indexOf("filename=\"") + 10);
+        filename = filename.substring(0, filename.indexOf("\n"));
+        filename = filename.substring(
+                filename.lastIndexOf("\\") + 1, filename.indexOf("\""));
+		return filename;
+	}
+
+
+}

@@ -1,0 +1,29 @@
+package cc.openhome;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/body.view")
+public class BodyServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	BufferedReader reader = req.getReader();
+        String input = null;
+        String requestBody = "";
+        while((input = reader.readLine()) != null) {
+            requestBody = requestBody + input + "<br>";
+        }
+        PrintWriter out = resp.getWriter();
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Servlet BodyView</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println(requestBody);
+        out.println("</body>");
+        out.println("</html>");
+    }
+}

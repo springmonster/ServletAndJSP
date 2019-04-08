@@ -1,0 +1,4 @@
+cc.openhome.address
+cc.openhome.username
+cc.openhome.password
+mail.smtp.socketFactory.class=javax.net.ssl.SSLSocketFactory

@@ -1,0 +1,21 @@
+package cc.openhome.model;
+
+import java.util.*;
+
+public class Message {
+    private String username;
+    private Date date;
+    private String txt;
+    
+    
+    
+    public String getUsername() {
+        return username;
+    }
+    public Date getDate() {
+        return date;
+    }
+    public String getTxt() {
+        return txt;
+    }
+}

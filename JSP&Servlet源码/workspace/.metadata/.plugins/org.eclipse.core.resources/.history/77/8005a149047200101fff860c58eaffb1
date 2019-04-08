@@ -1,0 +1,15 @@
+package cc.openhome.tag;
+
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class ChooseTag extends TagSupport {
+    private boolean matched;
+    public boolean isMatched() {
+        return matched;
+    }
+
+    public void setMatched(boolean matched) {
+        this.matched = matched;
+    }
+
+}

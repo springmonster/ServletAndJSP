@@ -1,0 +1,18 @@
+package cc.openhome;
+
+import javax.sql.*;
+import javax.sql.rowset.JdbcRowSet;
+
+public class Main {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        JdbcRowSet rowset = new JdbcRowSetImpl(jdbcUrl, user, passwd);
+        rowset.setCommand("SELECT * FROM T_BOOKMARK");
+        rowset.execute();
+
+    }
+
+}

@@ -1,0 +1,30 @@
+package cc.openhome;
+
+public class User  {
+    private String name;
+    private String remoteAddr;
+    private String userAgent;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRemoteAddr() {
+        return remoteAddr;
+    }
+
+    public String getUserAgent() {
+        return userAgent;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName() + ", " + this.getRemoteAddress() + ", " + this.getUserAgent();
+    }
+
+  
+}

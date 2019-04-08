@@ -1,0 +1,6 @@
+package cc.openhome.tag;
+
+public class IfTag extends TagSupport {
+    private boolean test;
+
+}

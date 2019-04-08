@@ -1,0 +1,6 @@
+package cc.openhome.model;
+
+public interface BlahDAO {
+    List<Blah> getBlahs(Blah blah);
+
+}

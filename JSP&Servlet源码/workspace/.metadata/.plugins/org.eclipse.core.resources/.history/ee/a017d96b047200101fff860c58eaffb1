@@ -1,0 +1,11 @@
+package cc.openhome.tag;
+
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class WhenTag extends TagSupport {
+    private boolean test;
+    
+    public void setTest(boolean test) {
+        this.test = test;
+    }
+}

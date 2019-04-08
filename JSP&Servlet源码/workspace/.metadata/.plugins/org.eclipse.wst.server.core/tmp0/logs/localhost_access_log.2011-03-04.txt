@@ -1,0 +1,5 @@
+127.0.0.1 - - [04/Mar/2011:12:16:48 +0800] "GET / HTTP/1.1" 404 953
+0:0:0:0:0:0:0:1 - - [04/Mar/2011:12:16:50 +0800] "GET /FirstServlet/hello.view HTTP/1.1" 200 106
+0:0:0:0:0:0:0:1 - - [04/Mar/2011:12:17:00 +0800] "GET /FirstServlet/hello.view?name=caterpillar HTTP/1.1" 200 113
+127.0.0.1 - - [04/Mar/2011:15:00:33 +0800] "GET / HTTP/1.1" 404 953
+0:0:0:0:0:0:0:1 - - [04/Mar/2011:15:00:34 +0800] "GET /FirstServlet/hello.view HTTP/1.1" 200 106

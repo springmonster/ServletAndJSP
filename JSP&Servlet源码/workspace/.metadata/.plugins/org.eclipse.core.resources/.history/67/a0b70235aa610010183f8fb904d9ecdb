@@ -1,0 +1,6 @@
+package cc.openhome.model;
+
+public class UserService {
+    private String USER_HOME;
+    
+}

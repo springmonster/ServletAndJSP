@@ -1,0 +1,38 @@
+package cc.openhome.model;
+
+import java.util.*;
+import javax.sql.DataSource;
+
+public class AccountDAOJdbcImpl implements AccountDAO {
+    private JdbcTemplate jdbcTemplate;
+    
+    public AccountDAOJdbcImpl(DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    }
+
+    @Override
+    public boolean isUserExisted(Account account) {
+        return jdbcTemplate.queryForList("SELECT COUNT(1) FROM t_account WHERE name = ?", 
+                new Object[] { account.getName() }).size() == 1;
+    }
+
+    @Override
+    public void addAccount(Account account) {
+        jdbcTemplate.update("INSERT INTO t_account(name, password, email) VALUES(?, ?, ?)", 
+                new Object[] {account.getName(), account.getEmail(), account.getPassword()});
+    }
+
+    @Override
+    public Account getAccount(Account account) {
+        List<Map> accts = jdbcTemplate.queryForList("SELECT email, password FROM t_account WHERE name = ?",
+                new Object[] { account.getName() });
+        if(accts.size() == 1) {
+            Map acct = accts.get(0);
+            String email = (String) acct.get("email");
+            String password = (String) acct.get("password");
+            return new Account(account.getName(), email, password);
+        }
+        return null;
+    }
+
+}

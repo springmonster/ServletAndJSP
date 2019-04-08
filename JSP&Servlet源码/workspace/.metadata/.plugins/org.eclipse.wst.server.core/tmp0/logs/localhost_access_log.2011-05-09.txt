@@ -1,0 +1,13 @@
+127.0.0.1 - - [09/May/2011:17:09:29 +0800] "GET / HTTP/1.1" 404 953
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:09:37 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1458
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:11:29 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1462
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:11:31 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1462
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:11:31 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1462
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:11:31 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1462
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:11:32 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1462
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:11:32 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1462
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:11:41 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1470
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:12:07 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1470
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:12:42 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1475
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:12:43 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1475
+0:0:0:0:0:0:0:1 - - [09/May/2011:17:13:04 +0800] "GET /JDBCDemo/metadata.jsp HTTP/1.1" 200 1475

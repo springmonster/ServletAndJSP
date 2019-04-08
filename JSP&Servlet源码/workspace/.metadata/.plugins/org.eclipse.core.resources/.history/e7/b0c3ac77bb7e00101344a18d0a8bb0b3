@@ -1,0 +1,20 @@
+package cc.openhome;
+
+import javax.sql.*;
+import javax.sql.rowset.JdbcRowSet;
+import com.sun.rowset.JdbcRowSetImpl;
+
+public class Main {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) throws Exception {
+        JdbcRowSet rowset = new JdbcRowSetImpl();
+        rowset.setUrl("jdbc:mysql://localhost:3306/demo")
+        rowset.setCommand("INSERT INTO T_MESSAGE(name, email, msg) VALUES('x', 'y', 'z')");
+        rowset.execute();
+
+    }
+
+}

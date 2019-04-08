@@ -1,0 +1,4 @@
+INDEX VERSION 1.122+X:\20120224\JSP&Servlet—ßœ∞± º«044950\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4066803413.index
+3139567196.index
+285121786.index

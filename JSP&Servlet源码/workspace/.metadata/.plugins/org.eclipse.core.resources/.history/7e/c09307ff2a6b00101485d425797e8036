@@ -1,0 +1,12 @@
+<%!
+    private String LOGIN_VIEW;
+
+    @Override
+    public void init() throws ServletException {
+        LOGIN_VIEW = getServletConfig().getInitParameter("LOGIN_VIEW");
+    }
+%>
+<% 
+    request.getSession().invalidate();
+    response.sendRedirect(LOGIN_VIEW);
+    %>

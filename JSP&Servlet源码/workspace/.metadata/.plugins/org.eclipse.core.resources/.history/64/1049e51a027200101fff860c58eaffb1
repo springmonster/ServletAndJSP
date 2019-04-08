@@ -1,0 +1,35 @@
+package cc.openhome.tag;
+
+import java.util.Collection;
+import java.util.Iterator;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class ForEachTag extends TagSupport {
+    private String var;
+    private Iterator iterator;
+    
+    public void setVar(String var) {
+        this.var = var;
+    }
+
+    public void setItems(Collection items) {
+        this.iterator = items.iterator();
+    }
+
+
+    @Override
+    public int doStartTag() throws JspException {
+        // TODO Auto-generated method stub
+        return super.doStartTag();
+    }
+    @Override
+    public int doAfterBody() throws JspException {
+        // TODO Auto-generated method stub
+        return super.doAfterBody();
+    }
+
+    
+    
+}

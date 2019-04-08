@@ -1,0 +1,10 @@
+package cc.openhome.model;
+
+public class UserService {
+    private String USER_HOME;
+    public UserService(String USER_HOME) {
+        this.USER_HOME = USER_HOME;
+    }
+    
+    
+}

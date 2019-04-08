@@ -1,0 +1,7 @@
+1299566463887	Extract method 'readBody'
+1299569423910	Extract method 'readBody'
+1299569482880	Extract method 'getFilename'
+1299569557052	Extract method 'getBoundary'
+1299570058839	Extract method 'getFilePosition'
+1299570287978	Extract method 'writeTo'
+1299570405097	Copy file

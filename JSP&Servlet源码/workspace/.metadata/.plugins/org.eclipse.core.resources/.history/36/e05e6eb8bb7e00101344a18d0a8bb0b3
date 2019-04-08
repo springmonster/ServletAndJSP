@@ -1,0 +1,25 @@
+package cc.openhome;
+
+import javax.sql.*;
+import javax.sql.rowset.JdbcRowSet;
+import com.sun.rowset.JdbcRowSetImpl;
+
+public class Main {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) throws Exception {
+        JdbcRowSet rowset = new JdbcRowSetImpl();
+        rowset.setUrl("jdbc:mysql://localhost:3306/demo");
+        rowset.setUsername("root");
+        rowset.setPassword("123456");
+        rowset.setCommand("SELECT * FROM t_messages WHERE id = ?");
+        rowset.setInt(1, 1);
+        rowset.execute();
+        while(rowset.next()) {
+            
+        }
+    }
+
+}

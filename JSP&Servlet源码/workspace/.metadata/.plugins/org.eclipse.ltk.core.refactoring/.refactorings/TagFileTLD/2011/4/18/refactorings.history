@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TagFileTLD/src/META-INF/TLD&apos; to &apos;TLDS&apos;" description="Rename resource &apos;TLD&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/META-INF/TLD" name="TLDS" stamp="1303955384768" updateReferences="true"/>
+</session>

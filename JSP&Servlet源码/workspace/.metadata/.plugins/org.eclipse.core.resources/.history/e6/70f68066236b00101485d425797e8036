@@ -1,0 +1,14 @@
+package cc.openhome.web;
+
+import org.apache.commons.lang.StringEscapeUtils;
+
+public class Main {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        System.out.println(StringEscapeUtils.escapeXml(str));
+    }
+
+}

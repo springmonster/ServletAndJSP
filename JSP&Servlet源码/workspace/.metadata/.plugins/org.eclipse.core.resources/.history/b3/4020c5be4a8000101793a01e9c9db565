@@ -1,0 +1,4 @@
+package cc.openhome.model;
+
+public class User {
+}

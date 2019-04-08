@@ -1,0 +1,12 @@
+package cc.openhome.model;
+
+import java.util.*;
+
+public class Message {
+    private String user;
+    private Date time;
+    private String txt;
+    
+    
+
+}

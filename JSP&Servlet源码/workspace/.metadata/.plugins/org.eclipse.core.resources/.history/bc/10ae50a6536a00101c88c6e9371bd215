@@ -1,0 +1,25 @@
+package cc.openhome.model;
+
+import java.util.*;
+
+public class Blabla {
+    private String username;
+    private Date date;
+    private String txt;
+    
+    public Blabla(String username, Date date, String txt) {
+        super();
+        this.username = username;
+        this.date = date;
+        this.txt = txt;
+    }
+    public String getUsername() {
+        return username;
+    }
+    public Date getDate() {
+        return date;
+    }
+    public String getTxt() {
+        return txt;
+    }
+}

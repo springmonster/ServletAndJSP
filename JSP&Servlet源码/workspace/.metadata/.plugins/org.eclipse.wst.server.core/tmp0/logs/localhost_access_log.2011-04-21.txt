@@ -1,0 +1,9 @@
+127.0.0.1 - - [21/Apr/2011:10:17:12 +0800] "GET / HTTP/1.1" 404 953
+0:0:0:0:0:0:0:1 - - [21/Apr/2011:10:17:16 +0800] "GET /JSTLDemo/login.jsp HTTP/1.1" 200 321
+0:0:0:0:0:0:0:1 - - [21/Apr/2011:10:17:41 +0800] "GET /JSTLDemo/login.jsp?name=caterpillar&password=1234 HTTP/1.1" 200 378
+0:0:0:0:0:0:0:1 - - [21/Apr/2011:10:17:46 +0800] "GET /JSTLDemo/login.jsp?name=caterpillar&password=1234 HTTP/1.1" 200 378
+127.0.0.1 - - [21/Apr/2011:10:28:23 +0800] "GET / HTTP/1.1" 404 953
+0:0:0:0:0:0:0:1 - - [21/Apr/2011:10:28:26 +0800] "GET /JSTLDemo/message.jsp HTTP/1.1" 200 871
+0:0:0:0:0:0:0:1 - - [21/Apr/2011:10:42:26 +0800] "GET /JSTLDemo/add.jsp HTTP/1.1" 200 361
+0:0:0:0:0:0:0:1 - - [21/Apr/2011:10:42:37 +0800] "GET /JSTLDemo/add.jsp?a=10&b=2o HTTP/1.1" 200 510
+0:0:0:0:0:0:0:1 - - [21/Apr/2011:10:54:41 +0800] "GET /JSTLDemo/count.jsp HTTP/1.1" 200 374

@@ -1,0 +1,422 @@
+2011/3/4 下午 03:53:10 org.apache.catalina.core.AprLifecycleListener init
+資訊: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.6.0\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;;C:\Program Files\Windows Live\Shared;C:\Program Files\QuickTime\QTSystem\;C:\Winware\scala-2.7.7\bin
+2011/3/4 下午 03:53:11 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 03:53:11 org.apache.coyote.AbstractProtocolHandler init
+嚴重的: Failed to initialize end point associated with ProtocolHandler ["http-bio-8080"]
+java.net.BindException: Address already in use: JVM_Bind <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:364)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:511)
+	at org.apache.coyote.AbstractProtocolHandler.init(AbstractProtocolHandler.java:345)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:119)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:910)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:778)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:572)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:263)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:431)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at java.net.ServerSocket.<init>(ServerSocket.java:150)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:48)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:351)
+	... 17 more
+2011/3/4 下午 03:53:11 org.apache.catalina.core.StandardService initInternal
+嚴重的: Failed to initialize connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:912)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:778)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:572)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:263)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:431)
+Caused by: java.net.BindException: Address already in use: JVM_Bind <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:364)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:511)
+	at org.apache.coyote.AbstractProtocolHandler.init(AbstractProtocolHandler.java:345)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:119)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:910)
+	... 13 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at java.net.ServerSocket.<init>(ServerSocket.java:150)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:48)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:351)
+	... 17 more
+2011/3/4 下午 03:53:11 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 03:53:11 org.apache.coyote.AbstractProtocolHandler init
+嚴重的: Failed to initialize end point associated with ProtocolHandler ["ajp-bio-8009"]
+java.net.BindException: Address already in use: JVM_Bind <null>:8009
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:364)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:511)
+	at org.apache.coyote.AbstractProtocolHandler.init(AbstractProtocolHandler.java:345)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:910)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:778)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:572)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:263)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:431)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at java.net.ServerSocket.<init>(ServerSocket.java:150)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:48)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:351)
+	... 16 more
+2011/3/4 下午 03:53:11 org.apache.catalina.core.StandardService initInternal
+嚴重的: Failed to initialize connector [Connector[AJP/1.3-8009]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:912)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:778)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:572)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:263)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:431)
+Caused by: java.net.BindException: Address already in use: JVM_Bind <null>:8009
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:364)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:511)
+	at org.apache.coyote.AbstractProtocolHandler.init(AbstractProtocolHandler.java:345)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:910)
+	... 13 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at java.net.ServerSocket.<init>(ServerSocket.java:150)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:48)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:351)
+	... 16 more
+2011/3/4 下午 03:53:11 org.apache.catalina.startup.Catalina load
+資訊: Initialization processed in 620 ms
+2011/3/4 下午 03:53:11 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service Catalina
+2011/3/4 下午 03:53:11 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet Engine: Apache Tomcat/7.0.8
+2011/3/4 下午 03:53:11 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory docs
+2011/3/4 下午 03:53:11 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory examples
+2011/3/4 下午 03:53:12 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory host-manager
+2011/3/4 下午 03:53:12 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory manager
+2011/3/4 下午 03:53:12 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory ROOT
+2011/3/4 下午 03:53:12 org.apache.catalina.startup.Catalina start
+資訊: Server startup in 1485 ms
+2011/3/4 下午 03:53:12 org.apache.catalina.core.StandardServer await
+嚴重的: StandardServer.await: create[localhost:8005]: 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:421)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:707)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:653)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:304)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:432)
+2011/3/4 下午 03:53:12 org.apache.coyote.AbstractProtocolHandler pause
+資訊: Pausing ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 03:53:12 org.apache.coyote.AbstractProtocolHandler pause
+資訊: Pausing ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 03:53:12 org.apache.catalina.core.StandardService stopInternal
+資訊: Stopping service Catalina
+2011/3/4 下午 03:53:20 org.apache.catalina.core.AprLifecycleListener init
+資訊: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.6.0\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;;C:\Program Files\Windows Live\Shared;C:\Program Files\QuickTime\QTSystem\;C:\Winware\scala-2.7.7\bin
+2011/3/4 下午 03:53:20 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 03:53:20 org.apache.coyote.AbstractProtocolHandler init
+嚴重的: Failed to initialize end point associated with ProtocolHandler ["http-bio-8080"]
+java.net.BindException: Address already in use: JVM_Bind <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:364)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:511)
+	at org.apache.coyote.AbstractProtocolHandler.init(AbstractProtocolHandler.java:345)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:119)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:910)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:778)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:572)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:263)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:431)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at java.net.ServerSocket.<init>(ServerSocket.java:150)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:48)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:351)
+	... 17 more
+2011/3/4 下午 03:53:20 org.apache.catalina.core.StandardService initInternal
+嚴重的: Failed to initialize connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:912)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:778)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:572)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:263)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:431)
+Caused by: java.net.BindException: Address already in use: JVM_Bind <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:364)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:511)
+	at org.apache.coyote.AbstractProtocolHandler.init(AbstractProtocolHandler.java:345)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:119)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:910)
+	... 13 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at java.net.ServerSocket.<init>(ServerSocket.java:150)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:48)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:351)
+	... 17 more
+2011/3/4 下午 03:53:20 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 03:53:20 org.apache.coyote.AbstractProtocolHandler init
+嚴重的: Failed to initialize end point associated with ProtocolHandler ["ajp-bio-8009"]
+java.net.BindException: Address already in use: JVM_Bind <null>:8009
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:364)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:511)
+	at org.apache.coyote.AbstractProtocolHandler.init(AbstractProtocolHandler.java:345)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:910)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:778)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:572)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:263)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:431)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at java.net.ServerSocket.<init>(ServerSocket.java:150)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:48)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:351)
+	... 16 more
+2011/3/4 下午 03:53:20 org.apache.catalina.core.StandardService initInternal
+嚴重的: Failed to initialize connector [Connector[AJP/1.3-8009]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:912)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:778)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:101)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:572)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:263)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:431)
+Caused by: java.net.BindException: Address already in use: JVM_Bind <null>:8009
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:364)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:511)
+	at org.apache.coyote.AbstractProtocolHandler.init(AbstractProtocolHandler.java:345)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:910)
+	... 13 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at java.net.ServerSocket.<init>(ServerSocket.java:150)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:48)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:351)
+	... 16 more
+2011/3/4 下午 03:53:20 org.apache.catalina.startup.Catalina load
+資訊: Initialization processed in 632 ms
+2011/3/4 下午 03:53:20 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service Catalina
+2011/3/4 下午 03:53:20 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet Engine: Apache Tomcat/7.0.8
+2011/3/4 下午 03:53:20 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory docs
+2011/3/4 下午 03:53:20 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory examples
+2011/3/4 下午 03:53:20 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory host-manager
+2011/3/4 下午 03:53:21 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory manager
+2011/3/4 下午 03:53:21 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory ROOT
+2011/3/4 下午 03:53:21 org.apache.catalina.startup.Catalina start
+資訊: Server startup in 688 ms
+2011/3/4 下午 03:53:29 org.apache.catalina.core.AprLifecycleListener init
+資訊: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.6.0\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;;C:\Program Files\Windows Live\Shared;C:\Program Files\QuickTime\QTSystem\;C:\Winware\scala-2.7.7\bin
+2011/3/4 下午 03:53:29 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 03:53:29 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 03:53:29 org.apache.catalina.startup.Catalina load
+資訊: Initialization processed in 535 ms
+2011/3/4 下午 03:53:29 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service Catalina
+2011/3/4 下午 03:53:29 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet Engine: Apache Tomcat/7.0.8
+2011/3/4 下午 03:53:29 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory docs
+2011/3/4 下午 03:53:29 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory examples
+2011/3/4 下午 03:53:30 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory host-manager
+2011/3/4 下午 03:53:30 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory manager
+2011/3/4 下午 03:53:30 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory ROOT
+2011/3/4 下午 03:53:30 org.apache.coyote.AbstractProtocolHandler start
+資訊: Starting ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 03:53:30 org.apache.coyote.AbstractProtocolHandler start
+資訊: Starting ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 03:53:30 org.apache.catalina.startup.Catalina start
+資訊: Server startup in 635 ms
+2011/3/4 下午 03:53:31 org.apache.coyote.AbstractProtocolHandler pause
+資訊: Pausing ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 03:53:32 org.apache.coyote.AbstractProtocolHandler pause
+資訊: Pausing ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 03:53:33 org.apache.catalina.core.StandardService stopInternal
+資訊: Stopping service Catalina
+2011/3/4 下午 03:53:35 org.apache.coyote.AbstractProtocolHandler stop
+資訊: Stopping ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 03:53:35 org.apache.coyote.AbstractProtocolHandler stop
+資訊: Stopping ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 04:00:37 org.apache.catalina.core.AprLifecycleListener init
+資訊: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.6.0\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;;C:\Program Files\Windows Live\Shared;C:\Program Files\QuickTime\QTSystem\;C:\Winware\scala-2.7.7\bin
+2011/3/4 下午 04:00:37 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 04:00:37 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 04:00:37 org.apache.catalina.startup.Catalina load
+資訊: Initialization processed in 544 ms
+2011/3/4 下午 04:00:37 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service Catalina
+2011/3/4 下午 04:00:37 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet Engine: Apache Tomcat/7.0.8
+2011/3/4 下午 04:00:37 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory docs
+2011/3/4 下午 04:00:37 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory examples
+2011/3/4 下午 04:00:38 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory host-manager
+2011/3/4 下午 04:00:38 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory manager
+2011/3/4 下午 04:00:38 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory ROOT
+2011/3/4 下午 04:00:38 org.apache.coyote.AbstractProtocolHandler start
+資訊: Starting ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 04:00:38 org.apache.coyote.AbstractProtocolHandler start
+資訊: Starting ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 04:00:38 org.apache.catalina.startup.Catalina start
+資訊: Server startup in 678 ms
+2011/3/4 下午 04:02:17 org.apache.coyote.AbstractProtocolHandler pause
+資訊: Pausing ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 04:02:18 org.apache.coyote.AbstractProtocolHandler pause
+資訊: Pausing ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 04:02:19 org.apache.catalina.core.StandardService stopInternal
+資訊: Stopping service Catalina
+2011/3/4 下午 04:02:22 org.apache.coyote.AbstractProtocolHandler stop
+資訊: Stopping ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 04:02:22 org.apache.coyote.AbstractProtocolHandler stop
+資訊: Stopping ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 04:02:38 org.apache.catalina.core.AprLifecycleListener init
+資訊: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.6.0\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;;C:\Program Files\Windows Live\Shared;C:\Program Files\QuickTime\QTSystem\;C:\Winware\scala-2.7.7\bin
+2011/3/4 下午 04:02:39 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 04:02:39 org.apache.coyote.AbstractProtocolHandler init
+資訊: Initializing ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 04:02:39 org.apache.catalina.startup.Catalina load
+資訊: Initialization processed in 532 ms
+2011/3/4 下午 04:02:39 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service Catalina
+2011/3/4 下午 04:02:39 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet Engine: Apache Tomcat/7.0.8
+2011/3/4 下午 04:02:39 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory docs
+2011/3/4 下午 04:02:39 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory examples
+2011/3/4 下午 04:02:39 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory host-manager
+2011/3/4 下午 04:02:39 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory manager
+2011/3/4 下午 04:02:39 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory ROOT
+2011/3/4 下午 04:02:39 org.apache.coyote.AbstractProtocolHandler start
+資訊: Starting ProtocolHandler ["http-bio-8080"]
+2011/3/4 下午 04:02:39 org.apache.coyote.AbstractProtocolHandler start
+資訊: Starting ProtocolHandler ["ajp-bio-8009"]
+2011/3/4 下午 04:02:39 org.apache.catalina.startup.Catalina start
+資訊: Server startup in 732 ms

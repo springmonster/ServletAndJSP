@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;cc.openhome.Process&apos; to &apos;Save&apos;&#x0D;&#x0A;- Original project: &apos;Exercise3-3&apos;&#x0D;&#x0A;- Original element: &apos;cc.openhome.Process&apos;&#x0D;&#x0A;- Renamed element: &apos;cc.openhome.Save&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Process&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;cc.openhome{Process.java[Process" matchStrategy="1" name="Save" qualified="false" references="true" similarDeclarations="false" stamp="1300242799564" textual="false" version="1.0"/>
+</session>

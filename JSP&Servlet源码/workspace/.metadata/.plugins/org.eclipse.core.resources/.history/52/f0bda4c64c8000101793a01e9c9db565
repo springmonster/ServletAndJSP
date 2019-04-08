@@ -1,0 +1,6 @@
+package cc.openhome.model;
+
+public interface AccountDAO {
+    boolean isUserExisted(Account account);
+    void add(Account account); 
+}

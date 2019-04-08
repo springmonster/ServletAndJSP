@@ -1,0 +1,19 @@
+package cc.openhome.tag;
+
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class RemoveTag extends TagSupport {
+    private String var;
+    private Object value;
+    private String scope;
+    
+    public void setVar(String var) {
+        this.var = var;
+    }
+    public void setValue(Object value) {
+        this.value = value;
+    }
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
+}

@@ -1,0 +1,6 @@
+package cc.openhome.model;
+
+public class Message {
+    private String user;
+    private String 
+}

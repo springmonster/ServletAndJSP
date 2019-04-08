@@ -1,0 +1,42 @@
+package cc.openhome.controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(
+        urlPatterns={"/password.do"},
+        initParams={
+            @WebInitParam(name = "SUCCESS_VIEW", value = "ok.jsp"),
+            @WebInitParam(name = "ERROR_VIEW", value = "forget.jsp")
+        }
+    )
+public class Password extends HttpServlet {
+    private String SUCCESS_VIEW;
+    private String ERROR_VIEW;
+
+    @Override
+    public void init() throws ServletException {
+        SUCCESS_VIEW = getServletConfig().getInitParameter("SUCCESS_VIEW");
+        ERROR_VIEW = getServletConfig().getInitParameter("ERROR_VIEW");
+    }
+    
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	    String email = request.getParameter("email");
+	    String page = null;
+	    if(isInvalidEmail(email)) {
+	        page = ERROR_VIEW;
+	    }
+	}
+	
+    private boolean isInvalidEmail(String email) {
+        return email == null
+                || !email.matches("^[_a-z0-9-]+([.]"
+                        + "[_a-z0-9-]+)*@[a-z0-9-]+([.][a-z0-9-]+)*$");
+    }
+
+}
