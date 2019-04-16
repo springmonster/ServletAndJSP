@@ -29,7 +29,12 @@ public class ServletConfigDemo extends HttpServlet {
 	public void init() throws ServletException {
 		// TODO Auto-generated method stub
 		super.init();
-		String param1 = getServletConfig().getInitParameter("PARAM1");
+//		String param1 = getServletConfig().getInitParameter("PARAM1");
+//		String param2 = getServletConfig().getInitParameter("PARAM2");
+//		System.out.println(param1);
+//		System.out.println(param2);
+		
+		String param1 = getInitParameter("PARAM1");
 		String param2 = getServletConfig().getInitParameter("PARAM2");
 		System.out.println(param1);
 		System.out.println(param2);
