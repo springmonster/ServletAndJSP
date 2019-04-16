@@ -40,4 +40,8 @@
 			<param-value>VALUE2</param-value>
 		</init-param>
 	</servlet>
+	<context-param>
+		<param-name>AVATAR</param-name>
+		<param-value>/avatars</param-value>
+	</context-param>
 </web-app>

@@ -13,8 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Avatar
  */
-@WebServlet(name = "Avatar", urlPatterns = { "/avatar.view" }, initParams = {
-		@WebInitParam(name = "AVATAR_DIR", value = "/avatars") })
+@WebServlet("/avatar.view")
 public class Avatar extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String AVATAR_DIR = "";
@@ -31,7 +30,7 @@ public class Avatar extends HttpServlet {
 	public void init() throws ServletException {
 		// TODO Auto-generated method stub
 		super.init();
-		AVATAR_DIR = getInitParameter("AVATAR_DIR");
+		AVATAR_DIR = (String) getServletContext().getAttribute("avatars");
 	}
 
 	/**
