@@ -24,7 +24,7 @@
   <listener>
     <listener-class>com.example.listener.MyServletContextListener</listener-class>
   </listener>
-   <servlet>
+  <servlet>
     <servlet-name>el</servlet-name>
     <servlet-class>com.example.el.ELServlet</servlet-class>
   </servlet>
